@@ -8,24 +8,20 @@ type Props = {};
 
 export const Footer = (props: Props) => {
 	return (
-		<footer className='flex flex-row justify-center border-t-2 p-5 mt-auto'>
-			<ul className='flex flex-row gap-8 items-end'>
+		<footer>
+			<ul>
 				<li>
-					<a
-						className='flex p-2'
-						href='https://www.linkedin.com/in/caolan-fanning-1a7229157/'>
+					<a href='https://www.linkedin.com/in/caolan-fanning-1a7229157/'>
 						<Image src={linkedIn} alt='LinkedIn Icon' height={24} width={24} />
 					</a>
 				</li>
 				<li>
-					<a className='flex p-2' href='https://github.com/caolan93'>
+					<a href='https://github.com/caolan93'>
 						<Image src={github} alt='Github Icon' height={24} width={24} />
 					</a>
 				</li>
 				<li>
-					<a
-						className='flex p-2'
-						href='https://discord.com/channels/1216860101810454588/1216860101810454590'>
+					<a href='https://discord.com/channels/1216860101810454588/1216860101810454590'>
 						<Image src={discord} alt='Discord Icon' height={24} width={24} />
 					</a>
 				</li>
