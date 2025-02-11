@@ -1,9 +1,9 @@
+import CSSSection from './sections/experience/CSS';
 
 export default function Home() {
-  return (
-    <div>
-      <h1>Test</h1>
-      <p>P tag</p>
-    </div>
-  );
+	return (
+		<div>
+			<CSSSection />
+		</div>
+	);
 }
