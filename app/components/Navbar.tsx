@@ -8,18 +8,18 @@ export const Navbar = (props: Props) => {
             <nav>
                 <ul className='flex flex-row gap-8 items-end'>
                     <li>
-                        <a className='text-xl' href="#">
+                        <a className='flex text-xl p-2' href="#">
                             About
                         </a>
                     </li>
                     <li>
-                        <a className='text-xl' href="#">
+                        <a className='flex text-xl p-2' href="#">
                             Experience
                         </a>
                     </li>
                     {/* TODO: ADD IN PROJECTS */}
                     <li>
-                        <a className='text-xl' href="#">
+                        <a className='flex text-xl p-2' href="#">
                             Contact
                         </a>
                     </li>

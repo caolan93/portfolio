@@ -1,10 +1,9 @@
-import { InfoCard } from "./components/InfoCard";
 
 export default function Home() {
   return (
-
-    <section className="px-5">
-      <InfoCard />
-    </section>
+    <div>
+      <h1>Test</h1>
+      <p>P tag</p>
+    </div>
   );
 }
