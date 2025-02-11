@@ -1,0 +1,38 @@
+footer ul {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+
+	li {
+		position: relative;
+		padding: 8px;
+
+		a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 1rem;
+			position: relative;
+
+			span {
+				position: absolute;
+				opacity: 0;
+				transform: translateY(0rem);
+				transition: opacity 200ms ease, transform 400ms ease-in;
+			}
+
+			&:hover {
+				img.github {
+					fill: #2b3137;
+				}
+
+				span {
+					opacity: 1;
+					transform: translateY(1.5rem);
+					transition: opacity 200ms 200ms ease, transform 400ms ease-in;
+				}
+			}
+		}
+	}
+}

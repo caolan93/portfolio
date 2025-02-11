@@ -1,0 +1,29 @@
+header .navbar ul {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+
+	li {
+		font-size: 1.5rem;
+		position: relative;
+		padding: 8px;
+		&:after {
+			position: absolute;
+			bottom: 8px;
+			left: 0px;
+			content: '';
+			width: 0%;
+			height: 2px;
+			background-color: black;
+			transition: width 200ms;
+			transition-delay: 100ms;
+		}
+		&:hover {
+			&:after {
+				width: 100%;
+				transition-delay: 200ms;
+				transition: width 200ms;
+			}
+		}
+	}
+}

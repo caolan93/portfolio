@@ -1,11 +1,12 @@
 import React from 'react';
+import './styles.css';
 
 type Props = {};
 
 export const Navbar = (props: Props) => {
 	return (
 		<header>
-			<nav>
+			<nav className='navbar'>
 				<ul>
 					<li>
 						<a href='#'>About</a>
