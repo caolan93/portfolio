@@ -1,48 +1,62 @@
-footer ul {
-	display: flex;
-	justify-content: center;
-	gap: 24px;
+footer {
+	container-type: inline-size;
+	width: 100%;
+	ul {
+		display: flex;
+		justify-content: center;
+		gap: 24px;
 
-	li {
-		position: relative;
-		padding: 8px;
-
-		a {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			font-size: 1rem;
+		li {
 			position: relative;
-			span {
-				position: absolute;
-				opacity: 0;
-				transform: translateY(0rem);
-				transition: opacity 200ms ease, transform 400ms ease-in;
-			}
-		}
+			padding: 8px;
 
-		&:hover a {
-			&.linkedin {
-				svg path {
-					fill: #0077b5;
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				font-size: 1rem;
+				position: relative;
+				span {
+					position: absolute;
+					opacity: 0;
+					transform: translateY(0rem);
+					transition: opacity 200ms ease, transform 400ms ease-in;
 				}
 			}
-			&.github {
-				svg path {
-					fill: #2b3137;
+
+			&:hover a {
+				&.linkedin {
+					color: #0077b5;
+					svg path {
+						fill: #0077b5;
+					}
 				}
-			}
-			&.discord {
-				svg path {
-					fill: #7289da;
+				&.github {
+					color: #2b3137;
+					svg path {
+						fill: #2b3137;
+					}
 				}
-			}
-			span {
-				opacity: 1;
-				transform: translateY(1.5rem);
-				transition: opacity 200ms 200ms ease, transform 400ms ease-in;
+				&.discord {
+					color: #7289da;
+					svg path {
+						fill: #7289da;
+					}
+				}
+				span {
+					opacity: 1;
+					transform: translateY(1.5rem);
+					transition: opacity 200ms 200ms ease, transform 400ms ease-in;
+				}
 			}
 		}
+	}
+}
+
+@container (width < 600px) {
+	footer ul {
+		flex-direction: column;
+		gap: 8px;
 	}
 }
