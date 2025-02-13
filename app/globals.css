@@ -6,6 +6,8 @@
 
 :root {
 	/* SPACERS */
+	--xxs-spacer: 4px;
+	--xs-spacer: 8px;
 	--s-spacer: 12px;
 	--m-spacer: 16px;
 	--l-spacer: 20px;
@@ -37,6 +39,8 @@ section {
 @media screen and (width <	 600px) {
 	:root {
 		/* PADDING */
+		--xxs-spacer: 4px;
+		--xs-spacer: 6px;
 		--s-spacer: 8px;
 		--m-spacer: 12px;
 		--l-spacer: 14px;

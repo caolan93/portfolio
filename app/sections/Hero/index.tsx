@@ -19,8 +19,11 @@ const webTechnologies = [
 		icon: <ReactNativeIcon />,
 		description: 'Used React Native',
 	},
+	{
+		icon: <SvelteIcon />,
+		description: 'Used Svelte',
+	},
 
-	// <SvelteIcon />,
 	// <NextIcon />,
 	// <TailwindIcon />,
 	// <MaterialuiIcon />,
