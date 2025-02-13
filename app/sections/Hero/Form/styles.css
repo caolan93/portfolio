@@ -20,6 +20,27 @@
 				border: none;
 				outline: none;
 				padding: var(--xs-spacer, 8px);
+				color: var(--secondary, #121212);
+			}
+		}
+
+		.get-in-touch-button {
+			width: 100%;
+			outline: none;
+			color: var(--secondary, #121212);
+			border: 1px solid var(--primary, #fff);
+			padding: var(--s-spacer, 8px);
+			border-radius: var(--s-radius, 6px);
+			cursor: pointer;
+			transition: all 150ms ease-out;
+			position: relative;
+			&:hover {
+				background-color: transparent;
+				color: var(--primary, #fff);
+			}
+			span {
+				display: inline-flex;
+				color: inherit;
 			}
 		}
 	}

@@ -25,7 +25,7 @@ const GetInTouch = (props: Props) => {
 						placeholder="What's going on..?"
 					/>
 				</label>
-				<button>Send</button>
+				<button className='get-in-touch-button'>Send</button>
 			</form>
 		</div>
 	);
