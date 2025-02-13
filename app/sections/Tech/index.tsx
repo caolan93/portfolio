@@ -65,7 +65,7 @@ const webTechnologies = [
 	},
 ];
 
-const HeroSection = (props: Props) => {
+const TechSection = (props: Props) => {
 	return (
 		<section>
 			<h3>Creating Cutting Edge Web Applications</h3>
@@ -97,4 +97,4 @@ const HeroSection = (props: Props) => {
 	);
 };
 
-export default HeroSection;
+export default TechSection;

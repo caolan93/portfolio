@@ -1,0 +1,53 @@
+.hero-container {
+	display: grid;
+	gap: var(--l-spacer, 24px);
+	place-content: center;
+	.hero-content {
+		display: grid;
+		gap: var(--l-spacer, 24px);
+		place-content: center;
+		h2 {
+			font-size: 3rem;
+		}
+		p {
+			width: 60ch;
+		}
+
+		button {
+			width: fit-content;
+			outline: none;
+			background-color: transparent;
+			border: 1px solid var(--white, #fff);
+			padding: var(--s-spacer, 8px);
+			border-radius: var(--l-radius, 12px);
+			cursor: pointer;
+		}
+	}
+}
+
+.dialog-container {
+	dialog {
+		margin: auto;
+		background-color: #121212;
+		outline: none;
+		border: 2px solid var(--white, #fff);
+		border-radius: var(--l-radius, 12px);
+		&::backdrop {
+			background-color: #00000099;
+		}
+
+		.dialog-content {
+			padding: var(--l-spacer, 24px);
+		}
+	}
+
+	@keyframes fadein {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			background-color: green;
+		}
+	}
+}

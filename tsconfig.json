@@ -19,7 +19,6 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./*"],
 			"@lib/*": ["./lib/*"],
 			"@components/*": ["./app/components/*"],
 			"@svgs/*": ["./app/components/Svgs/*"]
