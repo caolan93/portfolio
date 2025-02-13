@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	background: #121212;
+	color: var(--white, #fff);
+}
+
 :root {
 	/* SPACERS */
 	--xxs-spacer: 4px;
@@ -17,6 +22,8 @@
 	--m-radius: 12px;
 	--l-radius: 16px;
 	--full-radius: 999px;
+	/* COLORS */
+	--white: #fff;
 }
 
 ul {
