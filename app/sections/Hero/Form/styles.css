@@ -1,0 +1,26 @@
+.form-container {
+	display: flex;
+	flex-direction: column;
+	h2 {
+		margin-bottom: var(--s-spacer, 12px);
+	}
+	form {
+		/* background-color: var(--primary, #fff); */
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: var(--xs-spacer, 8px);
+		label {
+			display: flex;
+			flex-direction: column;
+
+			input,
+			textarea {
+				border-radius: var(--s-radius, 6px);
+				border: none;
+				outline: none;
+				padding: var(--xs-spacer, 8px);
+			}
+		}
+	}
+}

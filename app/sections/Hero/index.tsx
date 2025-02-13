@@ -3,12 +3,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './styles.css';
 import { greetings } from '@lib/constants';
-import { CookingPot } from 'lucide-react';
+import GetInTouch from './Form';
 
 type Props = {};
 
 const Dialog = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
+	const [isButtonHovered, setIsButtonHovered] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
 	const toggleDialog = () => {
@@ -27,7 +28,8 @@ const Dialog = () => {
 		const handleClickOutside = (event: MouseEvent) => {
 			const dialog = dialogRef.current;
 
-			if (dialog && isDialogOpen && event?.target?.tagName === 'DIALOG') {
+			//@ts-ignore
+			if (dialog && isDialogOpen && event.target.tagName === 'DIALOG') {
 				toggleDialog();
 			}
 		};
@@ -41,10 +43,12 @@ const Dialog = () => {
 
 	return (
 		<div className='dialog-container'>
-			<button onClick={toggleDialog}>Say Hi</button>
+			<button className='dialog-button' onClick={toggleDialog}>
+				<span>Say Hi</span>
+			</button>
 			<dialog ref={dialogRef}>
 				<div className='dialog-content'>
-					<p>Doaaaap</p>
+					<GetInTouch />
 				</div>
 			</dialog>
 		</div>

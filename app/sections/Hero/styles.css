@@ -1,53 +1,125 @@
 .hero-container {
-	display: grid;
+	display: flex;
+	justify-content: center;
 	gap: var(--l-spacer, 24px);
-	place-content: center;
+
 	.hero-content {
-		display: grid;
 		gap: var(--l-spacer, 24px);
-		place-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto;
+		max-width: 500px;
 		h2 {
-			font-size: 3rem;
+			font-size: 2.5rem;
+			line-height: 3rem;
 		}
 		p {
-			width: 60ch;
-		}
-
-		button {
-			width: fit-content;
-			outline: none;
-			background-color: transparent;
-			border: 1px solid var(--white, #fff);
-			padding: var(--s-spacer, 8px);
-			border-radius: var(--l-radius, 12px);
-			cursor: pointer;
+			max-width: 60ch;
 		}
 	}
 }
 
 .dialog-container {
+	display: flex;
+	justify-content: flex-end;
 	dialog {
 		margin: auto;
-		background-color: #121212;
+		background-color: var(--secondary, #212121);
 		outline: none;
-		border: 2px solid var(--white, #fff);
+		border: 2px solid var(--primary, #fff);
 		border-radius: var(--l-radius, 12px);
 		&::backdrop {
 			background-color: #00000099;
 		}
 
+		&[open] {
+			transition: display 1s allow-discrete, overlay 1s allow-discrete;
+		}
+
 		.dialog-content {
+			height: fit-content;
 			padding: var(--l-spacer, 24px);
 		}
 	}
 
-	@keyframes fadein {
-		0% {
-			opacity: 0;
+	.dialog-button {
+		width: fit-content;
+		outline: none;
+		color: var(--secondary, #121212);
+		border: 1px solid var(--primary, #fff);
+		padding: var(--s-spacer, 8px);
+		border-radius: var(--s-radius, 6px);
+		cursor: pointer;
+		transition: all 150ms ease-out;
+		position: relative;
+		& {
+			span {
+				display: inline-flex;
+				color: inherit;
+			}
 		}
-		100% {
-			opacity: 1;
-			background-color: green;
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 20px;
+			width: 10px;
+			background-color: var(--primary, #fff);
+			right: -10px;
+			bottom: 0px;
+			clip-path: polygon(0 0, 100% 100%, 0 65%);
 		}
+
+		&:hover {
+			background-color: var(--primary, #fff);
+			color: var(--secondary, #121212);
+			transition: all 150ms ease-in;
+
+			span {
+				font-weight: bold;
+				transition: font-weight 150ms ease-in;
+				animation: wiggle 500ms linear 300ms;
+			}
+		}
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		rotate: 0deg;
+	}
+	20% {
+		rotate: -5deg;
+	}
+	40% {
+		rotate: 5deg;
+	}
+	60% {
+		rotate: -5deg;
+	}
+	80% {
+		rotate: 5deg;
+	}
+	100% {
+		rotate: 0deg;
+	}
+}
+
+@keyframes open {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes close {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }

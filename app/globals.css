@@ -5,12 +5,12 @@
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: 'IBM Plex Mono', sans-serif;
-	color: var(--white, #fff);
+	color: var(--primary, #fff);
 }
 
 body {
 	background: #121212;
-	color: var(--white, #fff);
+	color: var(--primary, #fff);
 }
 
 :root {
@@ -50,21 +50,26 @@ section {
 
 h1 {
 	font-size: 2rem;
+	line-height: 2.5;
 	font-weight: 600;
 }
 
 h2 {
 	font-size: 1.5rem;
+	line-height: 2;
 	font-weight: 500;
 }
 
 h3 {
 	font-size: 1.125rem;
+	line-height: 1.5;
 	font-weight: 400;
 }
 
-p {
+p,
+button {
 	font-size: 1rem;
+	line-height: 1.2;
 	font-weight: normal;
 }
 
@@ -90,21 +95,26 @@ p {
 
 	h1 {
 		font-size: 1.5rem;
+		line-height: 2;
 		font-weight: 600;
 	}
 
 	h2 {
 		font-size: 1.2rem;
+		line-height: 1.5;
 		font-weight: 500;
 	}
 
 	h3 {
 		font-size: 1rem;
+		line-height: 1.2;
 		font-weight: 400;
 	}
 
-	p {
+	p,
+	button {
 		font-size: 0.825rem;
+		line-height: 1;
 		font-weight: normal;
 	}
 }
