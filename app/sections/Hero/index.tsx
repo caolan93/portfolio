@@ -11,13 +11,16 @@ const Dialog = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
+	console.log(isDialogOpen);
+
 	const toggleDialog = () => {
-		setIsDialogOpen(!isDialogOpen);
 		const dialog = dialogRef.current;
 		if (dialog) {
 			if (isDialogOpen) {
+				setIsDialogOpen(false);
 				dialog.close();
 			} else {
+				setIsDialogOpen(true);
 				dialog.showModal();
 			}
 		}
@@ -45,7 +48,7 @@ const Dialog = () => {
 			<button className='dialog-button' onClick={toggleDialog}>
 				<span>Say Hi</span>
 			</button>
-			<dialog ref={dialogRef}>
+			<dialog ref={dialogRef} onClose={() => setIsDialogOpen(false)}>
 				<div className='dialog-content'>
 					<GetInTouch />
 				</div>
