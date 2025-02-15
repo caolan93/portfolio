@@ -39,12 +39,18 @@ main {
 	flex-direction: column;
 	gap: var(--m-spacer, 24px);
 	padding: var(--m-spacer, 24px);
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	overflow: scroll;
+	scroll-behavior: smooth;
 }
 
 section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--m-spacer, 24px);
+	min-height: 100vh;
+	scroll-snap-align: center;
 }
 
 h1 {

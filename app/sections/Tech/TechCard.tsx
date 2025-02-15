@@ -1,5 +1,5 @@
 'use client';
-import { memo, ReactElement, useRef } from 'react';
+import { ReactElement, useRef } from 'react';
 
 const TechCard = ({ icon, name }: { icon: ReactElement; name: string }) => {
 	const cardRef = useRef<HTMLDivElement>(null);
@@ -27,4 +27,4 @@ const TechCard = ({ icon, name }: { icon: ReactElement; name: string }) => {
 	);
 };
 
-export default memo(TechCard);
+export default TechCard;

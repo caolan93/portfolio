@@ -11,8 +11,6 @@ const Dialog = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
-	console.log(isDialogOpen);
-
 	const toggleDialog = () => {
 		const dialog = dialogRef.current;
 		if (dialog) {

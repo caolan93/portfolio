@@ -1,5 +1,9 @@
 section {
+	display: grid;
+	place-content: center;
 	.technologies-container-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 		padding: var(--m-spacer, 20px);
 		border-radius: var(--s-radius, 8px);
 

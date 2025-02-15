@@ -11,7 +11,7 @@ const Greeting = () => {
 		const intervalId = setInterval(() => {
 			setCurrentGreeting(greetings[greetingIndex]);
 			greetingIndex = (greetingIndex + 1) % greetings.length;
-		}, 3000);
+		}, 1200);
 
 		return () => clearInterval(intervalId);
 	}, []);
