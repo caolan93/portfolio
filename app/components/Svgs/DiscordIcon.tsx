@@ -3,10 +3,7 @@ type IconProps = {
 	width?: string;
 };
 
-export const DiscordIcon = ({
-	height = '1.5rem',
-	width = '1.5rem',
-}: IconProps) => {
+const DiscordIcon = ({ height = '1.5rem', width = '1.5rem' }: IconProps) => {
 	return (
 		<svg width={width} height={height} viewBox='0 0 24 24' fill='none'>
 			<path
@@ -30,3 +27,5 @@ export const DiscordIcon = ({
 		</svg>
 	);
 };
+
+export default DiscordIcon;

@@ -3,10 +3,7 @@ type IconProps = {
 	width?: string;
 };
 
-export const GithubIcon = ({
-	height = '1.5rem',
-	width = '1.5rem',
-}: IconProps) => {
+const GithubIcon = ({ height = '1.5rem', width = '1.5rem' }: IconProps) => {
 	return (
 		<svg
 			width={width}
@@ -21,3 +18,5 @@ export const GithubIcon = ({
 		</svg>
 	);
 };
+
+export default GithubIcon;

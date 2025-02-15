@@ -1,15 +1,14 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import './styles.css';
-import { greetings } from '@lib/constants';
+import { useEffect, useRef, useState } from 'react';
 import GetInTouch from './Form';
+import Greeting from './Greeting';
+import './styles.css';
 
 type Props = {};
 
 const Dialog = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
-	const [isButtonHovered, setIsButtonHovered] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
 	const toggleDialog = () => {
@@ -56,23 +55,11 @@ const Dialog = () => {
 };
 
 const HeroSection = (props: Props) => {
-	const [currentGreeting, setCurrentGreeting] = useState(greetings[0]);
-
-	useEffect(() => {
-		let greetingIndex = 0;
-		const intervalId = setInterval(() => {
-			setCurrentGreeting(greetings[greetingIndex]);
-			greetingIndex = (greetingIndex + 1) % greetings.length;
-		}, 3000);
-
-		return () => clearInterval(intervalId);
-	}, []);
-
 	return (
 		<section className='hero-container'>
 			<div className='hero-content'>
 				<h2>
-					{currentGreeting}, <br />
+					<Greeting />,<br />
 					i'm <br />
 					caolan.
 				</h2>
