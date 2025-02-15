@@ -30,8 +30,11 @@ const Dialog = () => {
 		const handleClickOutside = (event: MouseEvent) => {
 			const dialog = dialogRef.current;
 
-			//@ts-ignore
-			if (dialog && isDialogOpen && event.target.tagName === 'DIALOG') {
+			if (
+				dialog &&
+				isDialogOpen &&
+				(event.target as Element).tagName === 'DIALOG'
+			) {
 				toggleDialog();
 			}
 		};
