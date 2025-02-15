@@ -11,7 +11,7 @@ import ReduxIcon from '@components/Svgs/ReduxIcon';
 import SvelteIcon from '@components/Svgs/SvelteIcon';
 import TailwindIcon from '@components/Svgs/TailwindIcon';
 import TypescriptIcon from '@components/Svgs/TypescriptIcon';
-import { ReactElement, useEffect, useRef } from 'react';
+import { ReactElement, useEffect, useRef, useState } from 'react';
 import './styles.css';
 
 type WebTechnology = {
@@ -64,10 +64,27 @@ const webTechnologies: Record<string, WebTechnology> = {
 };
 
 const TechCard = ({ icon, name }: { icon: ReactElement; name: string }) => {
+	const cardRef = useRef<HTMLDivElement>(null);
+
+	const addHoverClass = () => {
+		if (!cardRef.current) return;
+		cardRef.current.classList.remove('technology-icon-hover');
+	};
+
+	const removeHoverClass = () => {
+		if (!cardRef.current) return;
+		cardRef.current.classList.add('technology-icon-hover');
+	};
+
 	return (
-		<button className='technology-card'>
+		<button
+			onMouseEnter={addHoverClass}
+			onMouseLeave={removeHoverClass}
+			className='technology-card'>
 			<div className='technology-card-content'></div>
-			<div className='technology-icon'>{icon}</div>
+			<div ref={cardRef} className='technology-icon technology-icon-hover'>
+				{icon}
+			</div>
 		</button>
 	);
 };

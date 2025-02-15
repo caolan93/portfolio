@@ -27,9 +27,6 @@ section {
 					&:before {
 						opacity: 1;
 					}
-					.technology-icon {
-						color: #ffffff60;
-					}
 				}
 
 				&::before,
@@ -79,7 +76,16 @@ section {
 					border-radius: 50%;
 					padding: var(--xxs-spacer, 4px);
 					position: relative;
-					color: #ffffff10;
+				}
+				.technology-icon-hover {
+					svg {
+						path,
+						polygon,
+						rect,
+						circle {
+							fill: #ffffff10;
+						}
+					}
 				}
 			}
 		}
