@@ -1,27 +1,18 @@
 'use client';
 
-import ReactNativeIcon from '@components/Svgs/ReactNativeIcon';
-import SvelteIcon from '@components/Svgs/SvelteIcon';
-import {
-	Dispatch,
-	MouseEventHandler,
-	ReactElement,
-	Ref,
-	SetStateAction,
-	useEffect,
-	useRef,
-	useState,
-} from 'react';
-import './styles.css';
-import NextIcon from '@components/Svgs/NextIcon';
-import TailwindIcon from '@components/Svgs/TailwindIcon';
-import MaterialuiIcon from '@components/Svgs/MaterialuiIcon';
-import ReduxIcon from '@components/Svgs/ReduxIcon';
-import NodeIcon from '@components/Svgs/NodeIcon';
+import CssIcon from '@components/Svgs/CssIcon';
 import HtmlIcon from '@components/Svgs/HtmlIcon';
 import JavascriptIcon from '@components/Svgs/JavascriptIcon';
+import MaterialuiIcon from '@components/Svgs/MaterialuiIcon';
+import NextIcon from '@components/Svgs/NextIcon';
+import NodeIcon from '@components/Svgs/NodeIcon';
+import ReactNativeIcon from '@components/Svgs/ReactNativeIcon';
+import ReduxIcon from '@components/Svgs/ReduxIcon';
+import SvelteIcon from '@components/Svgs/SvelteIcon';
+import TailwindIcon from '@components/Svgs/TailwindIcon';
 import TypescriptIcon from '@components/Svgs/TypescriptIcon';
-import CssIcon from '@components/Svgs/CssIcon';
+import { ReactElement, useEffect, useRef } from 'react';
+import './styles.css';
 
 type WebTechnology = {
 	icon: ReactElement;
@@ -72,20 +63,10 @@ const webTechnologies: Record<string, WebTechnology> = {
 	},
 };
 
-const TechCard = ({
-	// selectTechnology,
-	icon,
-	name,
-}: {
-	// selectTechnology: (key: string) => void;
-	icon: ReactElement;
-	name: string;
-}) => {
-	const cardRef = useRef(null);
-
+const TechCard = ({ icon, name }: { icon: ReactElement; name: string }) => {
 	return (
 		<button className='technology-card'>
-			<div className='technology-card-content'></div>
+			<div className='technology-card-content' />
 			<div className='technology-icon'>{icon}</div>
 		</button>
 	);
