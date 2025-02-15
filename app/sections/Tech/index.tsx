@@ -66,7 +66,7 @@ const webTechnologies: Record<string, WebTechnology> = {
 const TechCard = ({ icon, name }: { icon: ReactElement; name: string }) => {
 	return (
 		<button className='technology-card'>
-			<div className='technology-card-content' />
+			<div className='technology-card-content'></div>
 			<div className='technology-icon'>{icon}</div>
 		</button>
 	);

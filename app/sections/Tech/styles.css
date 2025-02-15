@@ -23,6 +23,15 @@ section {
 				padding: var(--xs-spacer, 6px);
 				border-radius: var(--s-radius, 6px);
 
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+					.technology-icon {
+						color: #ffffff60;
+					}
+				}
+
 				&::before,
 				&::after {
 					border-radius: inherit;
@@ -34,10 +43,6 @@ section {
 					opacity: 0;
 					top: 0;
 					transition: opacity 500ms;
-				}
-
-				&:hover::before {
-					opacity: 1;
 				}
 
 				&::before {
@@ -68,13 +73,13 @@ section {
 					padding: 10px;
 					position: absolute;
 					z-index: 2;
-
-					.technology-icon {
-						border-radius: 50%;
-						padding: var(--xxs-spacer, 4px);
-						border-radius: 50%;
-						position: relative;
-					}
+				}
+				.technology-icon {
+					z-index: 2;
+					border-radius: 50%;
+					padding: var(--xxs-spacer, 4px);
+					position: relative;
+					color: #ffffff10;
 				}
 			}
 		}
