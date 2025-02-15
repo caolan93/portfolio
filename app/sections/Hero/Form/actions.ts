@@ -1,20 +1,12 @@
 'use server';
-import sendGrid from '@sendgrid/mail';
 
-// sgMail
-//   .send(msg)
-//   .then(() => {
-//     console.log('Email sent')
-//   })
-//   .catch((error) => {
-//     console.error(error)
-//   })
+import sendGrid from '@sendgrid/mail';
 
 export const sendEmail = async (formData: FormData) => {
 	sendGrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
-	const name = formData.get('name') ?? '';
-	const emailValue = formData.get('email') ?? '';
-	const messageValue = formData.get('message') ?? '';
+	const name = formData.get('name');
+	const emailValue = formData.get('email');
+	const messageValue = formData.get('message');
 
 	if (typeof emailValue === 'string' && typeof messageValue === 'string') {
 		const email = emailValue;

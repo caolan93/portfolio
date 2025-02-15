@@ -9,7 +9,7 @@ export function SubmitButton() {
 
 	return (
 		<button className='get-in-touch-button' disabled={pending} type='submit'>
-			Sign Up
+			Send Message
 		</button>
 	);
 }
