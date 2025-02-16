@@ -5,6 +5,12 @@
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: 'IBM Plex Mono', sans-serif;
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 body {
@@ -43,6 +49,8 @@ main {
 	height: 100vh;
 	overflow: scroll;
 	scroll-behavior: smooth;
+	max-width: 1500px;
+	margin-inline: auto;
 }
 
 section {

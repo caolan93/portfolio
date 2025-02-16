@@ -5,14 +5,14 @@ section {
 		display: grid;
 		place-content: center;
 		align-items: center;
-		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		padding: var(--m-spacer, 20px);
 		border-radius: var(--s-radius, 8px);
-
+		gap: var(--m-spacer, 20px);
 		.technologies-grid {
 			display: grid;
 			gap: var(--s-spacer, 8px);
-			grid-template-columns: repeat(auto-fit, 100px);
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 			place-content: center;
 
 			&:hover {
