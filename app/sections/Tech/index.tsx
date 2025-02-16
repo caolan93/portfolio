@@ -2,19 +2,19 @@
 
 import CardList from './CardList';
 import './styles.css';
+import TechDescription from './TechDescription';
+import { TechProvider } from './TechProvider';
 
 const TechSection = () => {
 	return (
-		<section>
-			<div className='technologies-container-grid'>
-				<CardList />
-				<p className='typewriter'>
-					As a web developver with 4+ years of experience I have had the
-					opportunity to work with many different technologies throughout my web
-					development <span>career.</span>
-				</p>
-			</div>
-		</section>
+		<TechProvider>
+			<section>
+				<div className='technologies-container-grid'>
+					<CardList />
+					<TechDescription />
+				</div>
+			</section>
+		</TechProvider>
 	);
 };
 
