@@ -3,6 +3,8 @@ section {
 	place-content: center;
 	.technologies-container-grid {
 		display: grid;
+		place-content: center;
+		align-items: center;
 		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 		padding: var(--m-spacer, 20px);
 		border-radius: var(--s-radius, 8px);
@@ -93,11 +95,28 @@ section {
 				}
 			}
 		}
+
+		.typewriter {
+			span {
+				display: inline-flex;
+				padding-right: 1px;
+				animation: blink 1200ms infinite;
+			}
+		}
 	}
 }
 
 @keyframes scrollAnimation {
 	to {
 		transform: translateX(calc(-100% - 24px));
+	}
+}
+
+@keyframes blink {
+	from {
+		border-right: 1px solid white;
+	}
+	to {
+		border-right: 0px;
 	}
 }
