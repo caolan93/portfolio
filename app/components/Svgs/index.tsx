@@ -17,6 +17,8 @@ import MongodbIcon from './MongodbIcon';
 import GraphqlIcon from './GraphqlIcon';
 import ExpressJsIcon from './ExpressJsIcon';
 import WordpressIcon from './WordpressIcon';
+import VitetestIcon from './VitetestIcon';
+import StorybookIcon from './StorybookIcon';
 
 export {
 	BootstrapIcon,
@@ -38,4 +40,6 @@ export {
 	GraphqlIcon,
 	ExpressJsIcon,
 	WordpressIcon,
+	VitetestIcon,
+	StorybookIcon,
 };

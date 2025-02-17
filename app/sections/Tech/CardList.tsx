@@ -12,9 +12,11 @@ import {
 	NodeIcon,
 	ReactNativeIcon,
 	ReduxIcon,
+	StorybookIcon,
 	SvelteIcon,
 	TailwindIcon,
 	TypescriptIcon,
+	VitetestIcon,
 	WordpressIcon,
 } from '@components/Svgs';
 import { ReactElement, useEffect, useRef } from 'react';
@@ -111,5 +113,11 @@ const webTechnologies: Record<string, WebTechnology> = {
 	},
 	wordpress: {
 		icon: <WordpressIcon />,
+	},
+	vitetest: {
+		icon: <VitetestIcon />,
+	},
+	storybook: {
+		icon: <StorybookIcon />,
 	},
 };

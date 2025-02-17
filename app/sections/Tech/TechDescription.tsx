@@ -6,7 +6,7 @@ type Props = {};
 
 const TechDescription = (props: Props) => {
 	const [aboutMe, setAboutMe] = useState<string | null>('');
-	const text = `A web developer with 4+ years of experience I have had the opportunity to work with many different technologies throughout my web development career. I have been a part of multiple real-world web and mobile applications, utilizing best practices such as WCAG accessibility standards, progressive enhancement, server-side rendering, and unit tests. Some of the technologies I have worked with on a day-to-day basis are listed to the left.`;
+	const text = `A web developer with 4+ years of experience I have had the opportunity to work with many different technologies throughout my web development career. I have been a part of multiple real-world web and mobile applications, utilizing best practices such as WCAG accessibility standards, progressive enhancement, server-side rendering, and unit tests.`;
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
 	const startTyping = () => {
@@ -34,8 +34,10 @@ const TechDescription = (props: Props) => {
 	return (
 		<div className='typewriter-container'>
 			{!aboutMe ? (
-				<div className='typewriter-button'>
-					<button onClick={startTyping}>A little bit about me</button>
+				<div className='typewriter-button-container'>
+					<button className='typewriter-button' onClick={startTyping}>
+						A little bit about me
+					</button>
 				</div>
 			) : (
 				<p className='typewriter'>
