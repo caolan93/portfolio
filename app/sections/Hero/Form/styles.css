@@ -2,10 +2,26 @@
 	display: flex;
 	flex-direction: column;
 	h2 {
+		text-align: center;
+		color: var(--primary, #fff);
 		margin-bottom: var(--s-spacer, 12px);
 	}
+
+	.alert-message {
+		padding: var(--xs-spacer, 6px);
+		p {
+			color: var(--primary, #fff);
+			text-align: center;
+		}
+		&.error {
+			background-color: var(--error, #ff2c2c);
+		}
+		&.success {
+			background-color: var(--success, #5cb85c);
+		}
+	}
+
 	form {
-		/* background-color: var(--primary, #fff); */
 		display: flex;
 		flex-direction: column;
 		width: 100%;

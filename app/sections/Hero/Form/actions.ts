@@ -2,7 +2,10 @@
 
 import sendGrid from '@sendgrid/mail';
 
-export const sendEmail = async (formData: FormData) => {
+export const sendEmail = async (
+	prev: { status: string; message: string },
+	formData: FormData,
+) => {
 	sendGrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
 	const name = formData.get('name');
 	const emailValue = formData.get('email');
@@ -24,10 +27,20 @@ export const sendEmail = async (formData: FormData) => {
 				throw new Error('Form data cannot be empty of undefined');
 			}
 			await sendGrid.send(msg);
+			return {
+				status: 'success',
+				message: 'Your message has been sent successfully!',
+			};
 		} catch (e: any) {
-			console.error(e.response);
+			return {
+				status: 'error',
+				message: 'Something went wrong! Please try again.',
+			};
 		}
 	} else {
-		console.error('Invalid email or message format.');
+		return {
+			status: 'error',
+			message: 'Please make sure all inputs are valid',
+		};
 	}
 };

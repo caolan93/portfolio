@@ -34,6 +34,8 @@ body {
 	/* COLORS */
 	--primary: #fff;
 	--secondary: #121212;
+	--success: #5cb85c;
+	--error: #ff2c2c;
 }
 
 ul {

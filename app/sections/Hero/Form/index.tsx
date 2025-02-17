@@ -1,8 +1,15 @@
+'use client';
+
 import { useFormStatus } from 'react-dom';
 import './styles.css';
 import { sendEmail } from './actions';
+import { useActionState } from 'react';
+import AlertMessage from './AlertMessage';
 
-type Props = {};
+const initialState = {
+	status: '',
+	message: '',
+};
 
 export function SubmitButton() {
 	const { pending } = useFormStatus();
@@ -14,30 +21,35 @@ export function SubmitButton() {
 	);
 }
 
-const GetInTouch = (props: Props) => {
+const GetInTouch = () => {
+	const [state, formAction, pending] = useActionState(sendEmail, initialState);
+
 	return (
 		<div className='form-container'>
 			<h2>Get in Touch</h2>
-			<form action={sendEmail}>
-				<label htmlFor=''>
-					Name
-					<input name='name' type='text' required placeholder='Name...' />
-				</label>
-				<label htmlFor=''>
-					Email
-					<input name='email' type='email' required placeholder='Email...' />
-				</label>
-				<label htmlFor=''>
-					Message
-					<textarea
-						name='message'
-						required
-						rows={10}
-						placeholder="What's going on..?"
-					/>
-				</label>
-				<SubmitButton />
-			</form>
+			<AlertMessage status={state.status} message={state.message} />
+			{state.status !== 'status' && (
+				<form action={formAction}>
+					<label htmlFor=''>
+						Name
+						<input name='name' type='text' required placeholder='Name...' />
+					</label>
+					<label htmlFor=''>
+						Email
+						<input name='email' type='email' required placeholder='Email...' />
+					</label>
+					<label htmlFor=''>
+						Message
+						<textarea
+							name='message'
+							required
+							rows={10}
+							placeholder="What's going on..?"
+						/>
+					</label>
+					<SubmitButton />
+				</form>
+			)}
 		</div>
 	);
 };

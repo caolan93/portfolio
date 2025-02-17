@@ -29,6 +29,8 @@
 		outline: none;
 		border: 2px solid var(--primary, #fff);
 		border-radius: var(--l-radius, 12px);
+		max-width: 500px;
+		width: 100%;
 		&::backdrop {
 			background-color: #00000099;
 		}
