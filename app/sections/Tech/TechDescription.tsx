@@ -6,7 +6,9 @@ type Props = {};
 
 const TechDescription = (props: Props) => {
 	const [aboutMe, setAboutMe] = useState<string | null>('');
-	const text = `A web developer with 4+ years of experience I have had the opportunity to work with many different technologies throughout my web development career. I have been a part of multiple real-world web and mobile applications, utilizing best practices such as WCAG accessibility standards, progressive enhancement, server-side rendering, and unit tests.`;
+	const text =
+		"I've spent over four years developing web applications, gaining experience with a variety of technologies.  I've contributed to numerous real-world web and mobile projects, implementing best practices such as WCAG accessibility, progressive enhancement, server-side rendering, and unit tests.";
+
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
 	const startTyping = () => {
