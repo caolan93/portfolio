@@ -1,116 +1,120 @@
-section {
-	display: grid;
-	place-content: center;
-	.technologies-container-grid {
-		display: grid;
+.technologies-container-grid {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: var(--m-spacer, 20px);
+	border-radius: var(--s-radius, 8px);
+	gap: var(--m-spacer, 20px);
+	.technologies-grid,
+	.typewriter-container {
+		max-width: 500px;
+		width: 100%;
+	}
+
+	.technologies-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--s-spacer, 8px);
 		place-content: center;
-		align-items: center;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		padding: var(--m-spacer, 20px);
-		border-radius: var(--s-radius, 8px);
-		gap: var(--m-spacer, 20px);
-		.technologies-grid {
-			display: grid;
-			gap: var(--s-spacer, 8px);
-			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-			place-content: center;
+
+		&:hover {
+			.technology-card::after {
+				opacity: 1;
+			}
+		}
+
+		.technology-card {
+			cursor: pointer;
+			position: relative;
+			background-color: rgba(255, 255, 255, 0.02);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			padding: var(--xs-spacer, 6px);
+			border-radius: var(--s-radius, 6px);
 
 			&:hover {
-				.technology-card::after {
+				&:before {
 					opacity: 1;
 				}
 			}
 
-			.technology-card {
-				cursor: pointer;
+			&::before,
+			&::after {
+				border-radius: inherit;
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				left: 0;
+				opacity: 0;
+				top: 0;
+				transition: opacity 500ms;
+			}
+
+			&::before {
+				background: radial-gradient(
+					800px circle at var(--mouse-x) var(--mouse-y),
+					rgba(255, 255, 255, 0.06),
+					transparent 40%
+				);
+				z-index: 3;
+			}
+
+			&::after {
+				background: radial-gradient(
+					600px circle at var(--mouse-x) var(--mouse-y),
+					rgba(255, 255, 255, 0.4),
+					transparent 40%
+				);
+				z-index: 1;
+			}
+
+			.technology-card-content {
+				background-color: rgb(23, 23, 23);
+				border-radius: inherit;
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+				inset: 1px;
+				padding: 10px;
+				position: absolute;
+				z-index: 2;
+			}
+			.technology-icon {
+				z-index: 2;
+				border-radius: 50%;
+				padding: var(--xxs-spacer, 4px);
 				position: relative;
-				background-color: rgba(255, 255, 255, 0.02);
-				border: 1px solid rgba(255, 255, 255, 0.1);
-				padding: var(--xs-spacer, 6px);
-				border-radius: var(--s-radius, 6px);
-
-				&:hover {
-					&:before {
-						opacity: 1;
-					}
-				}
-
-				&::before,
-				&::after {
-					border-radius: inherit;
-					content: '';
-					position: absolute;
-					height: 100%;
-					width: 100%;
-					left: 0;
-					opacity: 0;
-					top: 0;
-					transition: opacity 500ms;
-				}
-
-				&::before {
-					background: radial-gradient(
-						800px circle at var(--mouse-x) var(--mouse-y),
-						rgba(255, 255, 255, 0.06),
-						transparent 40%
-					);
-					z-index: 3;
-				}
-
-				&::after {
-					background: radial-gradient(
-						600px circle at var(--mouse-x) var(--mouse-y),
-						rgba(255, 255, 255, 0.4),
-						transparent 40%
-					);
-					z-index: 1;
-				}
-
-				.technology-card-content {
-					background-color: rgb(23, 23, 23);
-					border-radius: inherit;
-					display: flex;
-					flex-direction: column;
-					flex-grow: 1;
-					inset: 1px;
-					padding: 10px;
-					position: absolute;
-					z-index: 2;
-				}
-				.technology-icon {
-					z-index: 2;
-					border-radius: 50%;
-					padding: var(--xxs-spacer, 4px);
-					position: relative;
-				}
-				.technology-icon-hover {
-					svg {
-						path,
-						polygon,
-						rect,
-						circle {
-							fill: #ffffff10;
-						}
+			}
+			.technology-icon-hover {
+				svg {
+					path,
+					polygon,
+					rect,
+					circle {
+						fill: #ffffff10;
 					}
 				}
 			}
 		}
-
+	}
+	.typewriter-container {
+		.typewriter-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 		.typewriter {
 			span {
 				display: inline-flex;
 				height: 1.2rem;
 				width: 1px;
 				margin-bottom: -3px;
+				margin-left: 2px;
 				animation: blink 1200ms infinite step-end;
 			}
 		}
-	}
-}
-
-@keyframes scrollAnimation {
-	to {
-		transform: translateX(calc(-100% - 24px));
 	}
 }
 

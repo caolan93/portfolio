@@ -52,7 +52,7 @@ const CardList = () => {
 	return (
 		<div ref={cardListRef} className='technologies-grid'>
 			{Object.entries(webTechnologies).map(([key, { icon }], index) => (
-				<TechCard key={index} name={key} icon={icon} />
+				<TechCard key={index} icon={icon} tech={key} />
 			))}
 		</div>
 	);
@@ -62,49 +62,38 @@ export default CardList;
 
 type WebTechnology = {
 	icon: ReactElement;
-	description: string;
 };
 
 const webTechnologies: Record<string, WebTechnology> = {
 	react: {
 		icon: <ReactNativeIcon />,
-		description: 'Used React Native',
 	},
 	svelte: {
 		icon: <SvelteIcon />,
-		description: 'Used Svelte',
 	},
 	nextjs: {
 		icon: <NextIcon />,
-		description: 'Used NextJS',
 	},
 	tailwindcss: {
 		icon: <TailwindIcon />,
-		description: 'Used TailwindCSS',
 	},
 	materialui: {
 		icon: <MaterialuiIcon />,
-		description: 'Used MaterialuiIcon',
 	},
 	redux: {
 		icon: <ReduxIcon />,
-		description: 'Used ReduxIcon',
 	},
 	node: {
 		icon: <NodeIcon />,
-		description: 'Used NodeIcon',
 	},
 	typescript: {
 		icon: <TypescriptIcon />,
-		description: 'Used TypescriptIcon',
 	},
-	javascript: { icon: <JavascriptIcon />, description: 'Used JavascriptIcon' },
+	javascript: { icon: <JavascriptIcon /> },
 	css: {
 		icon: <CssIcon />,
-		description: 'Used CSSIcon	',
 	},
 	html: {
 		icon: <HtmlIcon />,
-		description: 'Used HtmlIcon',
 	},
 };
