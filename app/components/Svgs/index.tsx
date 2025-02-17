@@ -13,6 +13,10 @@ import ReduxIcon from './ReduxIcon';
 import SvelteIcon from './SvelteIcon';
 import TailwindIcon from './TailwindIcon';
 import TypescriptIcon from './TypescriptIcon';
+import MongodbIcon from './MongodbIcon';
+import GraphqlIcon from './GraphqlIcon';
+import ExpressJsIcon from './ExpressJsIcon';
+import WordpressIcon from './WordpressIcon';
 
 export {
 	BootstrapIcon,
@@ -30,4 +34,8 @@ export {
 	SvelteIcon,
 	TailwindIcon,
 	TypescriptIcon,
+	MongodbIcon,
+	GraphqlIcon,
+	ExpressJsIcon,
+	WordpressIcon,
 };

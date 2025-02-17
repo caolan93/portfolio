@@ -2,9 +2,12 @@
 
 import {
 	CssIcon,
+	ExpressJsIcon,
+	GraphqlIcon,
 	HtmlIcon,
 	JavascriptIcon,
 	MaterialuiIcon,
+	MongodbIcon,
 	NextIcon,
 	NodeIcon,
 	ReactNativeIcon,
@@ -12,6 +15,7 @@ import {
 	SvelteIcon,
 	TailwindIcon,
 	TypescriptIcon,
+	WordpressIcon,
 } from '@components/Svgs';
 import { ReactElement, useEffect, useRef } from 'react';
 import TechCard from './TechCard';
@@ -95,5 +99,17 @@ const webTechnologies: Record<string, WebTechnology> = {
 	},
 	html: {
 		icon: <HtmlIcon />,
+	},
+	mongodb: {
+		icon: <MongodbIcon />,
+	},
+	graphql: {
+		icon: <GraphqlIcon />,
+	},
+	express: {
+		icon: <ExpressJsIcon />,
+	},
+	wordpress: {
+		icon: <WordpressIcon />,
 	},
 };
