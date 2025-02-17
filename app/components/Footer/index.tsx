@@ -1,6 +1,4 @@
-import { DiscordIcon } from '../Svgs/DiscordIcon';
-import { GithubIcon } from '../Svgs/GithubIcon';
-import { LinkedinIcon } from '../Svgs/LinkedinIcon';
+import { DiscordIcon, GithubIcon, LinkedinIcon } from '@components/Svgs';
 import './styles.css';
 
 type Props = {};

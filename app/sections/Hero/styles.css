@@ -44,11 +44,10 @@
 	}
 
 	.dialog-button {
-		max-width: fit-content;
-		width: 100%;
+		width: 120px;
 		outline: none;
 		color: var(--secondary, #121212);
-		border: 1px solid var(--primary, #fff);
+		border: 2px solid var(--primary, #fff);
 		padding: var(--s-spacer, 8px);
 		border-radius: var(--s-radius, 6px);
 		cursor: pointer;
