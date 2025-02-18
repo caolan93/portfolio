@@ -58,7 +58,7 @@ const CardList = () => {
 
 	return (
 		<div ref={cardListRef} className='technologies-grid'>
-			{Object.entries(webTechnologies).map(([key, { icon }], index) => (
+			{Object.values(webTechnologies).map(({ icon }, index) => (
 				<TechCard key={index} icon={icon} />
 			))}
 		</div>
