@@ -22,7 +22,7 @@ export function SubmitButton() {
 }
 
 const GetInTouch = () => {
-	const [state, formAction, pending] = useActionState(sendEmail, initialState);
+	const [state, formAction] = useActionState(sendEmail, initialState);
 
 	return (
 		<div className='form-container'>

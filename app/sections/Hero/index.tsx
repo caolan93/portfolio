@@ -62,12 +62,13 @@ const HeroSection = () => {
 			<div className='hero-content'>
 				<h2 className='hero-title'>
 					<Greeting />,<br />
-					i'm <br />
+					{`i'm`}
+					<br />
 					caolan.
 				</h2>
 				<p>
-					I'm a Software Engineer from Dublin, Ireland. I build high-quality and
-					cutting edge web applications. Web development is my passion.
+					{`I'm`} a Software Engineer from Dublin, Ireland. I build high-quality
+					and cutting edge web applications. Web development is my passion.
 				</p>
 				<Dialog />
 			</div>

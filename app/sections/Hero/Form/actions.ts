@@ -31,7 +31,8 @@ export const sendEmail = async (
 				status: 'success',
 				message: 'Your message has been sent successfully!',
 			};
-		} catch (e: any) {
+		} catch (e: unknown) {
+			console.error(e);
 			return {
 				status: 'error',
 				message: 'Something went wrong! Please try again.',

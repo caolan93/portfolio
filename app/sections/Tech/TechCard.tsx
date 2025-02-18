@@ -2,7 +2,7 @@
 
 import { ReactElement, useRef } from 'react';
 
-const TechCard = ({ icon, tech }: { icon: ReactElement; tech: string }) => {
+const TechCard = ({ icon }: { icon: ReactElement }) => {
 	const cardRef = useRef<HTMLDivElement>(null);
 
 	const addHoverClass = () => {
