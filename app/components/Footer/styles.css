@@ -1,7 +1,7 @@
 footer {
 	container-type: inline-size;
 	width: 100%;
-	padding: var(--m-spacer, 16px);
+	padding: var(--l-spacer, 20px);
 	ul {
 		display: flex;
 		justify-content: center;

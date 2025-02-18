@@ -48,7 +48,7 @@ main {
 	gap: var(--m-spacer, 24px);
 	padding: var(--m-spacer, 24px);
 	scroll-snap-type: y mandatory;
-	height: calc(100vh - 72px);
+	height: calc(100vh - 88px);
 	overflow: scroll;
 	scroll-behavior: smooth;
 	max-width: 1500px;
@@ -59,7 +59,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--m-spacer, 24px);
-	min-height: calc(100vh - 72px);
+	min-height: calc(100vh - 88px);
 	scroll-snap-align: center;
 }
 
@@ -103,13 +103,13 @@ a {
 	main {
 		padding: var(--m-spacer, 16px);
 		gap: var(--m-spacer, 16px);
-		min-height: calc(100vh - 64px);
+		min-height: calc(100vh - 68px);
 	}
 
 	section {
 		align-content: center;
 		gap: var(--m-spacer, 16px);
-		min-height: calc(100vh - 64px);
+		min-height: calc(100vh - 68px);
 	}
 
 	h1 {

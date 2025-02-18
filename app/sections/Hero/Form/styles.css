@@ -4,7 +4,6 @@
 	h2 {
 		text-align: center;
 		color: var(--primary, #fff);
-		margin-bottom: var(--s-spacer, 12px);
 	}
 
 	.alert-message {

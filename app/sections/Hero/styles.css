@@ -2,7 +2,8 @@
 	display: flex;
 	justify-content: center;
 	gap: var(--l-spacer, 24px);
-
+	container-type: inline-size;
+	width: 100%;
 	.hero-content {
 		gap: var(--l-spacer, 24px);
 		display: flex;
@@ -10,7 +11,7 @@
 		justify-content: center;
 		margin: auto;
 		max-width: 500px;
-		h2 {
+		.hero-title {
 			font-size: 2.5rem;
 			line-height: 3rem;
 		}
@@ -84,6 +85,12 @@
 				animation: wiggle 500ms linear 300ms;
 			}
 		}
+	}
+}
+
+@container (width < 600px) {
+	.dialog-container dialog {
+		max-width: calc(100vw - 40px);
 	}
 }
 

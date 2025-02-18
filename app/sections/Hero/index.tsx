@@ -62,7 +62,7 @@ const HeroSection = (props: Props) => {
 	return (
 		<section className='hero-container'>
 			<div className='hero-content'>
-				<h2>
+				<h2 className='hero-title'>
 					<Greeting />,<br />
 					i'm <br />
 					caolan.
