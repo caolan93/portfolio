@@ -1,9 +1,6 @@
-import React from 'react';
 import './styles.css';
 
-type Props = {};
-
-export const Navbar = (props: Props) => {
+export const Navbar = () => {
 	return (
 		<header>
 			<nav className='navbar'>

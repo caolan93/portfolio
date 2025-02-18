@@ -1,8 +1,4 @@
-import React from 'react';
-
-type Props = {};
-
-const CssIcon = (props: Props) => {
+const CssIcon = () => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'

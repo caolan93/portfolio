@@ -1,8 +1,4 @@
-import React from 'react';
-
-type Props = {};
-
-const ExpressJsIcon = (props: Props) => {
+const ExpressJsIcon = () => {
 	return (
 		<svg x='0px' y='0px' width='48' height='48' viewBox='0 0 48 48'>
 			<path

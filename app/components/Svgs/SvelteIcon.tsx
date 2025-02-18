@@ -1,8 +1,4 @@
-import React from 'react';
-
-type Props = {};
-
-const SvelteIcon = (props: Props) => {
+const SvelteIcon = () => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'

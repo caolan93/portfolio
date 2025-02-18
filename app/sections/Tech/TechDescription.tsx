@@ -2,9 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-type Props = {};
-
-const TechDescription = (props: Props) => {
+const TechDescription = () => {
 	const [aboutMe, setAboutMe] = useState<string | null>('');
 	const text =
 		"I've spent over four years developing web applications, gaining experience with a variety of technologies.  I've contributed to numerous real-world web and mobile projects, implementing best practices such as WCAG accessibility, progressive enhancement, server-side rendering, and unit tests.";

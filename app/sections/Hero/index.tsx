@@ -5,8 +5,6 @@ import GetInTouch from './Form';
 import Greeting from './Greeting';
 import './styles.css';
 
-type Props = {};
-
 const Dialog = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement>(null);
@@ -58,7 +56,7 @@ const Dialog = () => {
 	);
 };
 
-const HeroSection = (props: Props) => {
+const HeroSection = () => {
 	return (
 		<section className='hero-container'>
 			<div className='hero-content'>
