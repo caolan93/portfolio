@@ -49,6 +49,7 @@
 			cursor: pointer;
 			transition: all 150ms ease-out;
 			position: relative;
+			background-color: var(--primary, #fff);
 			&:hover {
 				background-color: transparent;
 				color: var(--primary, #fff);
