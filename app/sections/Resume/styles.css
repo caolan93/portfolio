@@ -11,4 +11,9 @@
 		text-decoration: none;
 		color: var(--primary, #fff);
 	}
+
+	.online-resume {
+		text-decoration: underline;
+		text-underline-offset: 5px;
+	}
 }

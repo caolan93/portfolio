@@ -35,7 +35,7 @@ body {
 	--primary: #fff;
 	--secondary: #121212;
 	--success: #5cb85c;
-	--error: #ff2c2c;
+	--error: #ff9494;
 }
 
 ul {
@@ -48,7 +48,7 @@ main {
 	gap: var(--m-spacer, 24px);
 	padding: var(--m-spacer, 24px);
 	scroll-snap-type: y mandatory;
-	height: 100vh;
+	height: calc(100vh - 72px);
 	overflow: scroll;
 	scroll-behavior: smooth;
 	max-width: 1500px;
@@ -59,7 +59,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--m-spacer, 24px);
-	min-height: 100vh;
+	min-height: calc(100vh - 72px);
 	scroll-snap-align: center;
 }
 
@@ -82,7 +82,8 @@ h3 {
 }
 
 p,
-button {
+button,
+a {
 	font-size: 1rem;
 	line-height: 1.2;
 	font-weight: normal;
@@ -127,7 +128,8 @@ button {
 	}
 
 	p,
-	button {
+	button,
+	a {
 		font-size: 0.825rem;
 		line-height: 1;
 		font-weight: normal;

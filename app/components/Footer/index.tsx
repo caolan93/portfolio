@@ -1,9 +1,7 @@
 import { DiscordIcon, GithubIcon, LinkedinIcon } from '@components/Svgs';
 import './styles.css';
 
-type Props = {};
-
-export const Footer = (props: Props) => {
+export const Footer = () => {
 	return (
 		<footer>
 			<ul>

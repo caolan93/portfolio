@@ -5,8 +5,14 @@ const Resume = () => {
 	return (
 		<section className='resume-section'>
 			<h2>Resume</h2>
-			<a href='../../../lib/assets/files/CF_CV_2025.pdf' download='CF_CV_2025'>
+			<a href='/files/CF_CV_2025.pdf' download>
 				<DownloadIcon />
+			</a>
+			<a
+				className='online-resume'
+				href='https://docs.google.com/document/d/1PaesW078Ut32GhbYnld0pTV3beQp4unV173WTKwOUho/edit?usp=sharing'
+				target='_blank'>
+				View online
 			</a>
 		</section>
 	);
