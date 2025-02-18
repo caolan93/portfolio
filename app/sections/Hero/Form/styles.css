@@ -29,7 +29,7 @@
 		label {
 			display: flex;
 			flex-direction: column;
-
+			color: var(--primary, #fff);
 			input,
 			textarea {
 				border-radius: var(--s-radius, 6px);

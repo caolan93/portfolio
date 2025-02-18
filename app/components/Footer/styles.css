@@ -10,7 +10,7 @@ footer {
 
 		li {
 			position: relative;
-			padding: 8px;
+			padding: var(--s-spacer, 8px);
 
 			a {
 				display: flex;
@@ -53,12 +53,5 @@ footer {
 				}
 			}
 		}
-	}
-}
-
-@container (width < 600px) {
-	footer ul {
-		flex-direction: column;
-		gap: 8px;
 	}
 }
