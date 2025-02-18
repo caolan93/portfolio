@@ -3,6 +3,7 @@
 import {
 	CssIcon,
 	ExpressJsIcon,
+	GitIcon,
 	GraphqlIcon,
 	HtmlIcon,
 	JavascriptIcon,
@@ -119,5 +120,8 @@ const webTechnologies: Record<string, WebTechnology> = {
 	},
 	storybook: {
 		icon: <StorybookIcon />,
+	},
+	git: {
+		icon: <GitIcon />,
 	},
 };

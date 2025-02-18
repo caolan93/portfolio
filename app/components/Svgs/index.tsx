@@ -19,8 +19,11 @@ import ExpressJsIcon from './ExpressJsIcon';
 import WordpressIcon from './WordpressIcon';
 import VitetestIcon from './VitetestIcon';
 import StorybookIcon from './StorybookIcon';
+import GitIcon from './GitIcon';
+import DownloadIcon from './DownloadIcon';
 
 export {
+	DownloadIcon,
 	BootstrapIcon,
 	CssIcon,
 	DiscordIcon,
@@ -42,4 +45,5 @@ export {
 	WordpressIcon,
 	VitetestIcon,
 	StorybookIcon,
+	GitIcon,
 };
