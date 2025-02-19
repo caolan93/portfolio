@@ -40,7 +40,7 @@ const Dialog = () => {
 		return () => {
 			document.removeEventListener('click', handleClickOutside);
 		};
-	}, [isDialogOpen]);
+	}, [isDialogOpen, toggleDialog]);
 
 	return (
 		<div className='dialog-container'>
