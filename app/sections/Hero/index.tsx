@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import GetInTouch from './Form';
 import Greeting from './Greeting';
 import './styles.css';
@@ -9,7 +9,7 @@ const Dialog = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
-	const toggleDialog = () => {
+	const toggleDialog = useCallback(() => {
 		const dialog = dialogRef.current;
 		if (dialog) {
 			if (isDialogOpen) {
@@ -20,7 +20,7 @@ const Dialog = () => {
 				dialog.showModal();
 			}
 		}
-	};
+	}, [isDialogOpen]);
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
