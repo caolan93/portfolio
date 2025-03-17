@@ -47,19 +47,23 @@
 	}
 
 	.dialog-button {
-		width: fit-content;
+		min-width: 86px;
 		outline: none;
+		background-color: var(--primary, #fff);
 		color: var(--secondary, #121212);
 		border: 2px solid var(--primary, #fff);
 		padding: var(--s-spacer, 8px);
 		border-radius: var(--s-radius, 6px);
 		cursor: pointer;
-		transition: all 150ms ease-out;
 		position: relative;
-		& {
+		span {
+			display: inline-flex;
+		}
+
+		&:hover {
 			span {
-				display: inline-flex;
-				color: inherit;
+				animation: wiggle 500ms linear;
+				font-weight: bolder;
 			}
 		}
 
@@ -72,18 +76,6 @@
 			right: -10px;
 			bottom: 0px;
 			clip-path: polygon(0 0, 100% 100%, 0 65%);
-		}
-
-		&:hover {
-			background-color: var(--primary, #fff);
-			color: var(--secondary, #121212);
-			transition: all 150ms ease-in;
-
-			span {
-				font-weight: bold;
-				transition: font-weight 150ms ease-in;
-				animation: wiggle 500ms linear 300ms;
-			}
 		}
 	}
 }
@@ -112,23 +104,5 @@
 	}
 	100% {
 		rotate: 0deg;
-	}
-}
-
-@keyframes open {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes close {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
 	}
 }
